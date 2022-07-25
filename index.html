@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="./assets/css/uikit.min.css">
+    <link rel="stylesheet" href="./assets/css/custom.css">
+
+    <script src="./assets/js/uikit.min.js"></script>
+    <script src="./assets/js/uikit-icons.min.js"></script>
+    <script src="./assets/js/custom.js"></script>
+</head>
+<body>
+    <header>
+        <!--- Navbar -->
+        <nav class="uk-container uk-navbar">
+            <div class="uk-navbar-left">
+                <a class="uk-navbar-item uk-logo" href="#">
+                    REAL<strong>ESTATE</strong>
+                </a>
+            </div>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav uk-visible@s">
+                    <li class="uk-text-uppercase"><a href="#">Ingreso / Registro</a></li>
+                    <li>
+                        <a href="#"> 
+                            <button class=" uk-button uk-button-primary">Añadir propiedad</button> </a>
+                    </li>
+                    <li>
+                        <a uk-toggle="target: #search-modal" uk-search-icon></a>
+                    </li>
+                </ul>
+                <a href="#" class="uk-navbar-toogle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+            </div>
+
+            <!--- Search Modal -->
+            <div id="search-modal" class="uk-modal-full" uk-modal>
+                <div class="uk-modal-dialog">
+                    <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+                    <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+                        <div class="uk-background-cover uk-visible@m" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');" uk-height-viewport></div>
+                        <div class="uk-padding-large">
+                            <form class="uk-search uk-search-large">
+                                <span class="uk-search-icon-flip" uk-search-icon></span>
+                                <input class="uk-search-input" type="search" placeholder="Busca tu hogar..." autofocus>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Search Modal -->
+        </nav>
+        <!-- End Navbar -->
+        
+        <!--- Sidebar -->
+        <div id="sidenav" uk-offcanvas="overlay: true">
+            <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+                <ul class="uk-nav uk-nav-primary uk-margin-auto-vertical">
+                    <li class="uk-active uk-text-uppercase">
+                        <a href="#"></a>Real<strong>Estate</strong>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="uk-marging-small-right" uk-icon="icon: sign-in"></span> Ingreso / Registro
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="uk-marging-small-right" uk-icon="icon: plus"></span> Añadir propiedad
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!-- End Sidebar -->
+    </header>
+
+    <main>
+        <!--- Home slider -->
+        <div class="uk-section uk-padding-remove-top">
+            <div class="uk-cover-container">
+                <canvas width="" height="650px"></canvas>
+                <img src="./assets/img/backgound/hero.jpg" alt="hero-banner" uk-cover>                
+                <!-- <video src="https://yootheme.com/site/images/media/yootheme-pro.mp4"autoplay loop muted playsinline uk-cover></video> -->
+
+                <div class="uk-position-large uk-position-center uk-overlay-primary uk-box-shadow-xlarge uk-border-rounded">
+                    <form action="">
+                        <div uk-grid class="uk-padding">
+                            <div class="uk-width-1-1 uk-text-center">
+                                <h2>Encuentra tu hogar</h2>
+                            </div>
+    
+                            <div class="uk-width-1-2">
+                                <select class="uk-select">
+                                    <option selected disabled>Tipo de operación</option>
+                                    <option>Compra</option>
+                                    <option>Renta</option>
+                                    <option>Remate</option>
+                                </select>
+                            </div>
+                            <div class="uk-width-1-2">
+                                <select class="uk-select">
+                                    <option selected disabled>Tipo de propiedad</option>
+                                    <option>Casa</option>
+                                    <option>Departamento</option>
+                                    <option>Terreno</option>
+                                </select>
+                            </div>
+    
+                            <div class="uk-width-1-1">
+                                <input class="uk-input" type="text" name="address" placeholder="Busca la casa por dirección o palabras clave">
+                            </div>
+    
+                            <div class="uk-width-1-1">
+                                <button class="uk-button uk-button-secondary uk-width-1-1 uk-text-bold uk-text-uppercase">Buscar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--- End Home slider -->
+
+        <!--- Propiedades destacadas -->
+        <div class="uk-section uk-padding-remove-vertical">
+            <div class="uk-container">
+                <h2 class="uk-heading-line uk-text-center">
+                    <span class="uk-text-uppercase">Propiedades destacadas</span>
+                </h2>
+                
+                <div class="uk-slider-container-offset uk-margin-medium-top" uk-slider>
+                    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+                        <ul class="uk-slider-items uk-child-width-1-3@s uk-grid">
+                            <li>
+                                <div class="uk-card uk-card-default">
+                                    <p>Hola</p>
+                                </div>                                
+                            </li>
+                            <li>
+                                <div class="uk-card uk-card-default">
+                                    <p>Hola</p>
+                                </div>                                
+                            </li>
+                            <li>
+                                <div class="uk-card uk-card-default">
+                                    <p>Hola</p>
+                                </div>                                
+                            </li>
+                            <li>
+                                <div class="uk-card uk-card-default">
+                                    <p>Hola</p>
+                                </div>                                
+                            </li>
+                            <li>
+                                <div class="uk-card uk-card-default">
+                                    <p>Hola</p>
+                                </div>                                
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+                </div>
+            </div>
+        </div>
+        <!--- End Propiedades destacadas -->
+    </main>
+
+    <footer id="footer" class="uk-background-muted">
+        <div class="uk-container uk-padding">
+            <div class="uk-grid uk-container uk-child-width-1-1@s uk-child-width-1-3@m">
+                <!--- Acerca de -->
+                <div>
+                    <h3 class="uk-heading-bullet">Acerca</h3>
+                    <a href="#"> REAL<strong>STATE</strong> </a>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Voluptate consequuntur dignissimos saepe dolore.</p>
+                </div>
+                <!-- Fin acerca de-->
+                <!--- Ultimas propiedades -->
+                <div>
+                    <h3 class="uk-heading-bullet">Últimas propiedades</h3>
+
+                    <!-- item propiedad -->
+                    <div class="uk-marging-small" uk-grid>
+                        <div class="uk-width-1-4">
+                            <img src="https://getuikit.com/docs/images/light.jpg">
+                        </div>
+                        <div class="uk-width-3-4">
+                            <p class="uk-margin-remove"><b>Nombre de la propiedad</b></p>
+                            <p class="uk-margin-remove">Descripción de la propiedad</p>
+                        </div>
+                    </div>
+                    <!-- item propiedad -->
+                    <div class="uk-marging-small" uk-grid>
+                        <div class="uk-width-1-4">
+                            <img src="https://getuikit.com/docs/images/light.jpg">
+                        </div>
+                        <div class="uk-width-3-4">
+                            <p class="uk-margin-remove"><b>Nombre de la propiedad</b></p>
+                            <p class="uk-margin-remove">Descripción de la propiedad</p>
+                        </div>
+                    </div>
+                    <!-- item propiedad -->
+                    <div class="uk-marging-small" uk-grid>
+                        <div class="uk-width-1-4">
+                            <img src="https://getuikit.com/docs/images/light.jpg">
+                        </div>
+                        <div class="uk-width-3-4">
+                            <p class="uk-margin-remove"><b>Nombre de la propiedad</b></p>
+                            <p class="uk-margin-remove">Descripción de la propiedad</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin ultimas propiedades -->
+                <!--- Contacto -->
+                <div>
+                    <h3 class="uk-heading-bullet">Contacto</h3>
+
+                    <address>
+                        <span>Calle Arboledas #137 A</span><br>
+                        <span>Guadalajara Jalisco, México</span><br>
+                        <span>Teléfono: +34 35458974</span><br>
+                        <span>Email: <a href="mailto:example@mail">real_estate@mail</a></span>
+                    </address>
+
+                    <div>
+                        <form action="">
+                            <input type="email" name="email" class="uk-input uk-form-width-medium">
+                            <button class="uk-button uk-button-default">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Fin contacto -->
+            </div>
+        </div>
+        <div class="uk-container uk-background-secondary uk-light uk-padding-remove uk-container-expand">
+            <div class="uk-text-center uk-padding-small">
+                Real<strong>Estate</strong> &copy; 2022 Todos los derechos reservados
+            </div>
+        </div>        
+    </footer>
+
+</body>
+</html>
