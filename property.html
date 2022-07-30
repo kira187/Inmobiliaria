@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Info Property</title>
+    
+    <link rel="stylesheet" href="./assets/css/uikit.min.css">
+    <link rel="stylesheet" href="./assets/css/custom.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="./assets/js/uikit.min.js"></script>
+    <script src="./assets/js/uikit-icons.min.js"></script>
+    <script src="./assets/js/custom.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+</head>
+<body>
+    <header>
+        <!--- Navbar -->
+        <nav class="uk-container uk-navbar">
+            <div class="uk-navbar-left">
+                <a class="uk-navbar-item uk-logo" href="index.html">
+                    <small>
+                        REAL<strong>ESTATE</strong>
+                    </small>
+                </a>
+            </div>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav uk-visible@s">
+                    <li class="uk-text-uppercase"><a href="#">Ingreso / Registro</a></li>
+                    <li>
+                        <a href="create.html"> 
+                            <button class=" uk-button uk-button-primary">Añadir propiedad</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a uk-toggle="target: #search-modal" uk-search-icon></a>
+                    </li>
+                </ul>
+                <a href="#" class="uk-navbar-toogle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+            </div>
+
+            <!--- Search Modal -->
+            <div id="search-modal" class="uk-modal-full" uk-modal>
+                <div class="uk-modal-dialog">
+                    <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+                    <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+                        <div class="uk-background-cover uk-visible@m" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');" uk-height-viewport></div>
+                        <div class="uk-padding-large">
+                            <form class="uk-search uk-search-large">
+                                <span class="uk-search-icon-flip" uk-search-icon></span>
+                                <input class="uk-search-input" type="search" placeholder="Busca tu hogar..." autofocus>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Search Modal -->
+        </nav>
+        <!-- End Navbar -->
+        
+        <!--- Sidebar -->
+        <div id="sidenav" uk-offcanvas="overlay: true">
+            <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+                <ul class="uk-nav uk-nav-primary uk-margin-auto-vertical">
+                    <li class="uk-active uk-text-uppercase">
+                        <a href="#"></a>Real<strong>Estate</strong>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="uk-marging-small-right" uk-icon="icon: sign-in"></span> Ingreso / Registro
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="uk-marging-small-right" uk-icon="icon: plus"></span> Añadir propiedad
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!-- End Sidebar -->
+    </header>
+
+    <main>
+        <!-- Breadcrumb -->
+        <div class="uk-section uk-padding-remove">
+            <div class="uk-cover-container">
+                <canvas height="100px" width=""></canvas>
+                <img src="./assets/img/backgound/breadcrumb.jpg" alt="" uk-cover>
+
+                <div class="uk-position-small uk-position-center-left uk-overlay">
+                    <ul class="uk-breadcrumb uk-light">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Propiedades</a></li>
+                        <li><span>Información</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- End Breadcrumb -->
+
+        <!-- Property Heading-->
+        <div class="uk-section uk-padding-remove">
+            <div class="uk-background-muted">
+                <div class="uk-container uk-container-xlarge uk-padding-small">
+                    <h1 class="uk-heading-bullet"> Penthouse En Zona Minerva... <span class="uk-float-right uk-visible@s">$ 550,00 MXN</span> </h1>
+                </div>
+            </div>
+        </div>
+        <!-- End Property Heading-->
+
+        <!-- Slider -->
+        <div class="uk-section uk-padding-remove">
+            <div uk-slider>
+                <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+                    <ul class="uk-slider-items" uk-lightbox>
+                        <li>
+                            <div>
+                                <a href="https://getuikit.com/docs/images/slider1.jpg">
+                                    <img src="https://getuikit.com/docs/images/slider1.jpg" class="property-slider-img" alt="">
+                                </a>
+                            </div>
+                            <div class="uk-position-center uk-panel"><h1>1</h1></div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="https://getuikit.com/docs/images/slider2.jpg">
+                                    <img src="https://getuikit.com/docs/images/slider2.jpg" class="property-slider-img" alt="">
+                                </a>
+                            </div>
+                            <div class="uk-position-center uk-panel"><h1>2</h1></div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="https://getuikit.com/docs/images/slider3.jpg">
+                                    <img src="https://getuikit.com/docs/images/slider3.jpg" class="property-slider-img" alt="">
+                                </a>
+                            </div>
+                            <div class="uk-position-center uk-panel"><h1>3</h1></div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="https://getuikit.com/docs/images/slider4.jpg">
+                                    <img src="https://getuikit.com/docs/images/slider4.jpg" class="property-slider-img" alt="">
+                                </a>
+                            </div>
+                            <div class="uk-position-center uk-panel"><h1>4</h1></div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="https://getuikit.com/docs/images/slider5.jpg">
+                                    <img src="https://getuikit.com/docs/images/slider5.jpg" class="property-slider-img" alt="">
+                                </a>
+                            </div>
+                            <div class="uk-position-center uk-panel"><h1>5</h1></div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="https://getuikit.com/docs/images/slider1.jpg">
+                                    <img src="https://getuikit.com/docs/images/slider1.jpg" class="property-slider-img" alt="">
+                                </a>
+                            </div>
+                            <div class="uk-position-center uk-panel"><h1>6</h1></div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="https://getuikit.com/docs/images/slider2.jpg">
+                                    <img src="https://getuikit.com/docs/images/slider2.jpg" class="property-slider-img" alt="">
+                                </a>
+                            </div>
+                            <div class="uk-position-center uk-panel"><h1>7</h1></div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="https://getuikit.com/docs/images/slider3.jpg">
+                                    <img src="https://getuikit.com/docs/images/slider3.jpg" class="property-slider-img" alt="">
+                                </a>
+                            </div>
+                            <div class="uk-position-center uk-panel"><h1>8</h1></div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="https://getuikit.com/docs/images/slider4.jpg">
+                                    <img src="https://getuikit.com/docs/images/slider4.jpg" class="property-slider-img" alt="">
+                                </a>
+                            </div>
+                            <div class="uk-position-center uk-panel"><h1>9</h1></div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="https://getuikit.com/docs/images/slider5.jpg">
+                                    <img src="https://getuikit.com/docs/images/slider5.jpg" class="property-slider-img" alt="">
+                                </a>
+                            </div>
+                            <div class="uk-position-center uk-panel"><h1>10</h1></div>
+                        </li>
+                    </ul>
+                
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                
+                </div>
+            </div>
+        </div>
+        <!-- End Slider -->
+
+        <!-- Property Description -->
+        <div class="uk-section-small uk-background-muted">
+            <div class="uk-container uk-container-large">
+                <div uk-grid>
+                    <!-- MAIN SECTION -->
+                    <div class="uk-width-expand">
+                        <div class="uk-card uk-card-default uk-card-body uk-margin">
+                            <h3 class="uk-card-title uk-text-uppercase">Descripción</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quibusdam unde voluptates mollitia earum eaque, perferendis incidunt laudantium, ipsa labore explicabo provident veritatis adipisci non et ab necessitatibus itaque facere.</p>
+                        </div>
+                        
+                        <div class="uk-card uk-card-default uk-card-body uk-margin">
+                            <h3 class="uk-card-title uk-text-uppercase">Características</h3>
+                            <div class="uk-child-width-1-3@m uk-child-width-1-1@s" uk-grid>
+                                <div>
+                                    <ul class="uk-list uk-list-divider uk-margin-remove-bottom">
+                                        <li class="uk-text-success">
+                                            <span class="uk-margin-small-right" uk-icon="check"></span>
+                                            Sala de estar
+                                        </li>
+                                        <li class="uk-text-success">
+                                            <span class="uk-margin-small-right" uk-icon="check"></span>
+                                            Alberca techada
+                                        </li>
+                                        <li class="uk-text-success">
+                                            <span class="uk-margin-small-right" uk-icon="check"></span>
+                                            Clima
+                                        </li>
+                                        <li class="uk-text-success">
+                                            <span class="uk-margin-small-right" uk-icon="check"></span>
+                                            Parque
+                                        </li>
+                                        <li class="uk-text-success">
+                                            <span class="uk-margin-small-right" uk-icon="check"></span>
+                                            Sala de cine
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <ul class="uk-list uk-list-divider uk-margin-remove-bottom">
+                                        <li class="uk-text-success">
+                                            <span class="uk-margin-small-right" uk-icon="check"></span>
+                                            Sala de estar
+                                        </li>
+                                        <li class="uk-text-success">
+                                            <span class="uk-margin-small-right" uk-icon="check"></span>
+                                            Alberca techada
+                                        </li>
+                                        <li class="uk-text-success">
+                                            <span class="uk-margin-small-right" uk-icon="check"></span>
+                                            Clima
+                                        </li>
+                                        <li class="uk-text-success">
+                                            <span class="uk-margin-small-right" uk-icon="check"></span>
+                                            Parque
+                                        </li>
+                                        <li class="uk-text-success">
+                                            <span class="uk-margin-small-right" uk-icon="check"></span>
+                                            Sala de cine
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <ul class="uk-list uk-list-divider uk-margin-remove-bottom">
+                                        <li class="uk-text-success">
+                                            <span class="uk-margin-small-right" uk-icon="check"></span>
+                                            Sala de estar
+                                        </li>
+                                        <li class="uk-text-success">
+                                            <span class="uk-margin-small-right" uk-icon="check"></span>
+                                            Alberca techada
+                                        </li>
+                                        <li class="uk-text-success">
+                                            <span class="uk-margin-small-right" uk-icon="check"></span>
+                                            Clima
+                                        </li>
+                                        <li class="uk-text-success">
+                                            <span class="uk-margin-small-right" uk-icon="check"></span>
+                                            Parque
+                                        </li>
+                                        <li class="uk-text-success">
+                                            <span class="uk-margin-small-right" uk-icon="check"></span>
+                                            Sala de cine
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-card uk-card-default uk-card-body uk-margin" uk-lightbox>
+                            <h3 class="uk-card-title uk-text-uppercase">Video</h3>
+                            <p>Da clic en el video para ampliar.</p>
+                            <a href="https://www.youtube.com/watch?v=RsrvO2CF-3s">
+                                <div class="uk-cover-container uk-height-medium">
+                                    <iframe src="https://www.youtube-nocookie.com/embed/RsrvO2CF-3s?autoplay=1&amp;controls=0&amp;showinfo=8&amp;rel=0&amp;loop=1&amp;modestbranding=1&amp;wmode=transparent"width="1928"height="1980"frameborder="0"allowfullscreen uk-cover></iframe>
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="uk-card uk-card-default uk-card-body uk-margin">
+                            <h3 class="uk-card-title uk-text-uppercase">Ubicación</h3>
+                            <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-99.12978351116182%2C23.774167034125785%2C-99.1227024793625%2C23.778496877930028&amp;layer=mapnik&amp;marker=23.776331974047128%2C-99.12624299526215" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=23.77633&amp;mlon=-99.12624#map=18/23.77633/-99.12624">Visualizar ubicación en mapa completo</a></small>
+                        </div>
+                        <div class="uk-card uk-card-default uk-card-body uk-margin">
+                            <h3 class="uk-card-title">PLANOS</h3>
+                            <ul uk-accordion>
+                                <li class="uk-open">
+                                    <a href="#" class="uk-accordion-title">Planta baja</a>
+                                    <div class="uk-accordion-content" uk-lightbox>
+                                        <a href="https://www.roomsketcher.com/wp-content/uploads/2017/11/RoomSketcher-Order-Floor-Plans-2D-Floor-Plan.jpg">
+                                            <img class="floor-plans" src="https://www.roomsketcher.com/wp-content/uploads/2017/11/RoomSketcher-Order-Floor-Plans-2D-Floor-Plan.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="uk-accordion-title">Piso</a>
+                                    <div class="uk-accordion-content" uk-lightbox>
+                                        <a href="https://www.roomsketcher.com/wp-content/uploads/2017/11/RoomSketcher-Order-Floor-Plans-2D-Floor-Plan.jpg">
+                                            <img class="floor-plans" src="https://www.roomsketcher.com/wp-content/uploads/2017/11/RoomSketcher-Order-Floor-Plans-2D-Floor-Plan.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="uk-accordion-title">Planta Alta</a>
+                                    <div class="uk-accordion-content" uk-lightbox>
+                                        <a href="https://www.roomsketcher.com/wp-content/uploads/2017/11/RoomSketcher-Order-Floor-Plans-2D-Floor-Plan.jpg">
+                                            <img class="floor-plans" src="https://www.roomsketcher.com/wp-content/uploads/2017/11/RoomSketcher-Order-Floor-Plans-2D-Floor-Plan.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="uk-card uk-card-default uk-card-body uk-margin">
+                            <h3>Comentarios</h3>
+
+                            <ul class="uk-comment-list">
+                                <li>
+                                    <article class="uk-comment uk-visible-toggle" tabindex="-1">
+                                        <header class="uk-comment-header uk-position-relative">
+                                            <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                                                <div class="uk-width-auto">
+                                                    <img class="uk-comment-avatar" src="https://getuikit.com/docs/images/avatar.jpg" width="80" height="80" alt="">
+                                                </div>
+                                                <div class="uk-width-expand">
+                                                    <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Author</a></h4>
+                                                    <p class="uk-comment-meta uk-margin-remove-top"><a class="uk-link-reset" href="#">12 days ago</a></p>
+                                                </div>
+                                            </div>
+                                            <div class="uk-position-top-right uk-position-small uk-hidden-hover"><a class="uk-link-muted" href="#">Reply</a></div>
+                                        </header>
+                                        <div class="uk-comment-body">
+                                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                                        </div>
+                                    </article>
+                                    <ul>
+                                        <li>
+                                            <article class="uk-comment uk-comment-primary uk-visible-toggle" tabindex="-1">
+                                                <header class="uk-comment-header uk-position-relative">
+                                                    <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                                                        <div class="uk-width-auto">
+                                                            <img class="uk-comment-avatar" src="https://getuikit.com/docs/images/avatar.jpg" width="80" height="80" alt="">
+                                                        </div>
+                                                        <div class="uk-width-expand">
+                                                            <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Author</a></h4>
+                                                            <p class="uk-comment-meta uk-margin-remove-top"><a class="uk-link-reset" href="#">12 days ago</a></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="uk-position-top-right uk-position-small uk-hidden-hover"><a class="uk-link-muted" href="#">Reply</a></div>
+                                                </header>
+                                                <div class="uk-comment-body">
+                                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                                                </div>
+                                            </article>
+                                        </li>
+                                        <li>
+                                            <article class="uk-comment uk-visible-toggle" tabindex="-1">
+                                                <header class="uk-comment-header uk-position-relative">
+                                                    <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                                                        <div class="uk-width-auto">
+                                                            <img class="uk-comment-avatar" src="https://getuikit.com/docs/images/avatar.jpg" width="80" height="80" alt="">
+                                                        </div>
+                                                        <div class="uk-width-expand">
+                                                            <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Author</a></h4>
+                                                            <p class="uk-comment-meta uk-margin-remove-top"><a class="uk-link-reset" href="#">12 days ago</a></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="uk-position-top-right uk-position-small uk-hidden-hover"><a class="uk-link-muted" href="#">Reply</a></div>
+                                                </header>
+                                                <div class="uk-comment-body">
+                                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                                                </div>
+                                            </article>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ASIDE -->
+                    <div class="uk-width-1-3@m uk-width-1-1@s">
+                        <!-- Perfil de agente -->
+                        <div class="uk-card uk-card-default uk-margin">
+                            <div class="uk-card-header">
+                                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                    <div class="uk-width-auto">
+                                        <img class="uk-border-circle" src="https://getuikit.com/docs/images/avatar.jpg" style="width: 60px; height: 60px">
+                                    </div>
+                                    <div class="uk-width-expand">
+                                        <h3 class="uk-card-title uk-margin-remove-bottom">Andre Lopéz Jimenez</h3>
+                                        <p class="uk-text-meta uk-margin-remove-top">Agente</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-card-body">
+                                <h3 class="uk-card-title">Datos de contacto:</h3>
+                                <p><b>Teléfono: </b>+52 (33) 1290129810</p>
+                                <p><b>WhatsApp: </b>+52 (33) 1290129810</p>
+                                <p><b>Email: </b>andrealpz@mail.com</p>
+                            </div>
+                        </div>
+
+                        <!-- Contacto -->
+                        <form action="">
+                            <div class="uk-card uk-card-default uk-margin uk-card-body">
+                                <h3 class="uk-card-title">Contactar con el anunciante</h3>
+                                <div class="uk-child-width-1-1" uk-grid>
+                                    <div class="uk-margin-small">
+                                        <label>Nombre: </label>
+                                        <input type="text" class="uk-input">
+                                    </div>
+                                    <div class="uk-margin-small">
+                                        <label>Correo: </label>
+                                        <input type="email" class="uk-input">
+                                    </div>
+                                    <div class="uk-margin-small">
+                                        <label>Teléfono: </label>
+                                        <input type="number" class="uk-input">
+                                    </div>
+                                    <div class="uk-margin-small">
+                                        <label>Mensaje: </label>
+                                        <textarea class="uk-textarea">Hola vi el anuncion en REALESTATE y quiero me contacten</textarea>
+                                    </div>
+                                    <div class="uk-margin-small">
+                                        <label>
+                                            <input type="checkbox" class="uk-checkbox">
+                                            Quiero que me llamen
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <button class="uk-button uk-button-secondary uk-width-1-1 uk-text-bold uk-text-uppercase">Enviar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="uk-card uk-card-default uk-card-body uk-margin">
+                            <!-- Search Form -->
+                            <form action="" method="post">
+                                <ul uk-accordion="multiple: true">
+                                    <li  class="uk-open">
+                                        <a href="#" class="uk-accordion-title">Buscador</a>
+                                        <div class="uk-accordion-content">
+                                            <div uk-grid>
+                                                <div class="uk-width-1-1">
+                                                    <label for="Ubicación">Ubicación:</label>
+                                                    <input class="uk-input" type="text" placeholder="Ciudad, estado, país">
+                                                </div>
+                                                <div class="uk-width-1-1 uk-margin-small">
+                                                    <label for="Operación">Operación:</label>
+                                                    <select class="uk-select">
+                                                        <option selected disabled>Tipo de operación</option>
+                                                        <option value="compra">Compra</option>
+                                                        <option value="venta">Venta</option>
+                                                        <option value="renta">Renta</option>
+                                                    </select>
+                                                </div>
+                                                <div class="uk-width-1-1 uk-margin-small">
+                                                    <label for="tipo_propiedad">Tipo de propiedad:</label>
+                                                    <select name="tipo_propiedad" class="uk-select">
+                                                        <option selected disabled>Tipo de propiedad</option>
+                                                        <option value="casa">Casa</option>
+                                                        <option value="casa">Departamento</option>
+                                                        <option value="casa">Terreno</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="uk-open">
+                                        <a href="#" class="uk-accordion-title">Intervalos</a>
+                                        <div class="uk-accordion-content">
+                                            <div class="uk-child-width-1-2 uk-margin-small" uk-grid>
+                                                <div>
+                                                    <label>Recámaras:</label>
+                                                    <input type="number" class="uk-input" name="room_min" placeholder="Min.">
+                                                </div>
+                                                <div>
+                                                    <label>&nbsp;</label>
+                                                    <input type="number" class="uk-input" name="room_max" placeholder="Max.">
+                                                </div>
+                                            </div>
+                                            <div class="uk-child-width-1-2 uk-margin-small" uk-grid>
+                                                <div>
+                                                    <label>Precio:</label>
+                                                    <input type="number" class="uk-input" name="price_min" placeholder="Min.">
+                                                </div>
+                                                <div>
+                                                    <label>&nbsp;</label>
+                                                    <input type="number" class="uk-input" name="price_max" placeholder="Max.">
+                                                </div>
+                                            </div>
+                                            <div class="uk-child-width-1-2 uk-margin-small" uk-grid>
+                                                <div>
+                                                    <label>Autos:</label>
+                                                    <input type="number" class="uk-input" name="car_min" placeholder="Min.">
+                                                </div>
+                                                <div>
+                                                    <label>&nbsp;</label>
+                                                    <input type="number" class="uk-input" name="car_max" placeholder="Max.">
+                                                </div>
+                                            </div>
+                                            <div class="uk-child-width-1-2 uk-margin-small" uk-grid>
+                                                <div>
+                                                    <label>Superficie:</label>
+                                                    <input type="number" class="uk-input" name="superficie_min" placeholder="Min.">
+                                                </div>
+                                                <div>
+                                                    <label>&nbsp;</label>
+                                                    <input type="number" class="uk-input" name="superficie_max" placeholder="Max.">
+                                                </div>
+                                            </div>
+                                            <div class="uk-child-width-1-2 uk-margin-small" uk-grid>
+                                                <div>
+                                                    <label>Baños:</label>
+                                                    <input type="number" class="uk-input" name="badht_min" placeholder="Min.">
+                                                </div>
+                                                <div>
+                                                    <label>&nbsp;</label>
+                                                    <input type="number" class="uk-input" name="badht_max" placeholder="Max.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="uk-accordion-title">Ambiente</a>
+                                        <div class="uk-accordion-content">
+                                            <div uk-grid>
+                                                <div class="uk-width-1-1 uk-margin-small">
+                                                    <label>
+                                                        <input class="uk-checkbox" type="checkbox"> Bodega
+                                                    </label>
+                                                </div>
+                                                <div class="uk-width-1-1 uk-margin-small">
+                                                    <label>
+                                                        <input class="uk-checkbox" type="checkbox"> Estudio
+                                                    </label>
+                                                </div>
+                                                <div class="uk-width-1-1 uk-margin-small">
+                                                    <label>
+                                                        <input class="uk-checkbox" type="checkbox"> Salon de fiestas
+                                                    </label>
+                                                </div>
+                                                <div class="uk-width-1-1 uk-margin-small">
+                                                    <label>
+                                                        <input class="uk-checkbox" type="checkbox"> Cuarto de TV
+                                                    </label>
+                                                </div>
+                                                <div class="uk-width-1-1 uk-margin-small">
+                                                    <label>
+                                                        <input class="uk-checkbox" type="checkbox"> Area de servicio
+                                                    </label>
+                                                </div>
+                                                <div class="uk-width-1-1 uk-margin-small">
+                                                    <label>
+                                                        <input class="uk-checkbox" type="checkbox"> Alberca
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="uk-accordion-title">Fecha de publicación</a>
+                                        <div class="uk-accordion-content">
+                                            <div uk-grid>
+                                                <div class="uk-width-1-1 uk-margin-small">
+                                                    <label>
+                                                        <input type="radio" class="uk-radio" name="pub_date" value="today"> Hoy
+                                                    </label>
+                                                </div>
+                                                <div class="uk-width-1-1 uk-margin-small">
+                                                    <label>
+                                                        <input type="radio" class="uk-radio" name="pub_date" value="yesterday"> Ayer
+                                                    </label>
+                                                </div>
+                                                <div class="uk-width-1-1 uk-margin-small">
+                                                    <label>
+                                                        <input type="radio" class="uk-radio" name="pub_date" value="yesterday"> Última semana
+                                                    </label>
+                                                </div>
+                                                <div class="uk-width-1-1 uk-margin-small">
+                                                    <label>
+                                                        <input type="radio" class="uk-radio" name="pub_date" value="yesterday"> Últimos 15 días
+                                                    </label>
+                                                </div>
+                                                <div class="uk-width-1-1 uk-margin-small">
+                                                    <label>
+                                                        <input type="radio" class="uk-radio" name="pub_date" value="yesterday"> Últimos 30 días
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="uk-accordion-title">Servicios</a>
+                                        <div class="uk-accordion-content">
+                                            <div uk-grid>
+                                                <div class="uk-width-1-1 uk-margin-small">
+                                                    <label>
+                                                        <input class="uk-checkbox" type="checkbox"> Seguridad privada
+                                                    </label>
+                                                </div>
+                                                <div class="uk-width-1-1 uk-margin-small">
+                                                    <label>
+                                                        <input class="uk-checkbox" type="checkbox"> Cisterna
+                                                    </label>
+                                                </div>
+                                                <div class="uk-width-1-1 uk-margin-small">
+                                                    <label>
+                                                        <input class="uk-checkbox" type="checkbox"> Calentador de agua
+                                                    </label>
+                                                </div>
+                                                <div class="uk-width-1-1 uk-margin-small">
+                                                    <label>
+                                                        <input class="uk-checkbox" type="checkbox"> Servicios básicos (luz/agua)
+                                                    </label>
+                                                </div>
+                                                <div class="uk-width-1-1 uk-margin-small">
+                                                    <label>
+                                                        <input class="uk-checkbox" type="checkbox"> Gas
+                                                    </label>
+                                                </div>
+                                                <div class="uk-width-1-1 uk-margin-small">
+                                                    <label>
+                                                        <input class="uk-checkbox" type="checkbox"> Servicio telefonico/internet
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="uk-accordion-title">Exteriores</a>
+                                        <div class="uk-accordion-content">
+                                            <div uk-grid>
+                                                <div class="uk-width-1-1 uk-margin-small">
+                                                    <label>
+                                                        <input class="uk-checkbox" type="checkbox"> Asador
+                                                    </label>
+                                                </div>
+                                                <div class="uk-width-1-1 uk-margin-small">
+                                                    <label>
+                                                        <input class="uk-checkbox" type="checkbox"> Cancha de tenis
+                                                    </label>
+                                                </div>
+                                                <div class="uk-width-1-1 uk-margin-small">
+                                                    <label>
+                                                        <input class="uk-checkbox" type="checkbox"> Estacionamiento para visitas
+                                                    </label>
+                                                </div>
+                                                <div class="uk-width-1-1 uk-margin-small">
+                                                    <label>
+                                                        <input class="uk-checkbox" type="checkbox"> Cancha de squash
+                                                    </label>
+                                                </div>
+                                                <div class="uk-width-1-1 uk-margin-small">
+                                                    <label>
+                                                        <input class="uk-checkbox" type="checkbox"> Parque
+                                                    </label>
+                                                </div>
+                                                <div class="uk-width-1-1 uk-margin-small">
+                                                    <label>
+                                                        <input class="uk-checkbox" type="checkbox"> Terraza
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="uk-accordion-title">Otras</a>
+                                        <div class="uk-accordion-content">
+                                            <div uk-grid>
+                                                <div class="uk-width-1-1 uk-margin-small">
+    
+                                                    <select class="uk-select">
+                                                        <option selected disabled>Tipo de anunciante</option>
+                                                        <option value="inmobiliarias">Inmobiliarias</option>
+                                                        <option value="trato_directo">Trato directo</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+    
+                                <div class="uk-width-1-1">
+                                    <button class="uk-button uk-button-secondary uk-width-1-1 uk-text-bold uk-text-uppercase">Buscar</button>
+                                </div>
+                            </form>
+                            <!-- End Search Form -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer" class="uk-background-muted">
+        <div class="uk-container uk-padding">
+            <div class="uk-grid uk-container uk-child-width-1-1@s uk-child-width-1-3@m">
+                <!--- Acerca de -->
+                <div>
+                    <h3 class="uk-heading-bullet">Acerca</h3>
+                    <a href="#"> REAL<strong>STATE</strong> </a>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Voluptate consequuntur dignissimos saepe dolore.</p>
+                </div>
+                <!-- Fin acerca de-->
+                <!--- Ultimas propiedades -->
+                <div>
+                    <h3 class="uk-heading-bullet">Últimas propiedades</h3>
+
+                    <!-- item propiedad -->
+                    <div class="uk-marging-small" uk-grid>
+                        <div class="uk-width-1-4">
+                            <img src="https://getuikit.com/docs/images/light.jpg">
+                        </div>
+                        <div class="uk-width-3-4">
+                            <p class="uk-margin-remove"><b>Nombre de la propiedad</b></p>
+                            <p class="uk-margin-remove">Descripción de la propiedad</p>
+                        </div>
+                    </div>
+                    <!-- item propiedad -->
+                    <div class="uk-marging-small" uk-grid>
+                        <div class="uk-width-1-4">
+                            <img src="https://getuikit.com/docs/images/light.jpg">
+                        </div>
+                        <div class="uk-width-3-4">
+                            <p class="uk-margin-remove"><b>Nombre de la propiedad</b></p>
+                            <p class="uk-margin-remove">Descripción de la propiedad</p>
+                        </div>
+                    </div>
+                    <!-- item propiedad -->
+                    <div class="uk-marging-small" uk-grid>
+                        <div class="uk-width-1-4">
+                            <img src="https://getuikit.com/docs/images/light.jpg">
+                        </div>
+                        <div class="uk-width-3-4">
+                            <p class="uk-margin-remove"><b>Nombre de la propiedad</b></p>
+                            <p class="uk-margin-remove">Descripción de la propiedad</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin ultimas propiedades -->
+                <!--- Contacto -->
+                <div>
+                    <h3 class="uk-heading-bullet">Contacto</h3>
+
+                    <address>
+                        <span>Calle Arboledas #137 A</span><br>
+                        <span>Guadalajara Jalisco, México</span><br>
+                        <span>Teléfono: +34 35458974</span><br>
+                        <span>Email: <a href="mailto:example@mail">real_estate@mail</a></span>
+                    </address>
+
+                    <div>
+                        <form action="">
+                            <input type="email" name="email" class="uk-input uk-form-width-medium">
+                            <button class="uk-button uk-button-default">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Fin contacto -->
+            </div>
+        </div>
+        <div class="uk-container uk-background-secondary uk-light uk-padding-remove uk-container-expand">
+            <div class="uk-text-center uk-padding-small">
+                Real<strong>Estate</strong> &copy; 2022 Todos los derechos reservados
+            </div>
+        </div>        
+    </footer>
+</body>
+</html>

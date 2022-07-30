@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Añadir propiedad</title>
+    
+    <link rel="stylesheet" href="./assets/css/uikit.min.css">
+    <link rel="stylesheet" href="./assets/css/custom.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="./assets/js/uikit.min.js"></script>
+    <script src="./assets/js/uikit-icons.min.js"></script>
+    <script src="./assets/js/custom.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+</head>
+<body>
+    <header>
+        <!--- Navbar -->
+        <nav class="uk-container uk-navbar">
+            <div class="uk-navbar-left">
+                <a class="uk-navbar-item uk-logo" href="index.html">
+                    <small>
+                        REAL<strong>ESTATE</strong>
+                    </small>
+                </a>
+            </div>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav uk-visible@s">
+                    <li class="uk-text-uppercase"><a href="#">Ingreso / Registro</a></li>
+                    <li>
+                        <a href="create.html"> 
+                            <button class=" uk-button uk-button-primary">Añadir propiedad</button> </a>
+                    </li>
+                    <li>
+                        <a uk-toggle="target: #search-modal" uk-search-icon></a>
+                    </li>
+                </ul>
+                <a href="#" class="uk-navbar-toogle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+            </div>
+
+            <!--- Search Modal -->
+            <div id="search-modal" class="uk-modal-full" uk-modal>
+                <div class="uk-modal-dialog">
+                    <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+                    <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+                        <div class="uk-background-cover uk-visible@m" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');" uk-height-viewport></div>
+                        <div class="uk-padding-large">
+                            <form class="uk-search uk-search-large">
+                                <span class="uk-search-icon-flip" uk-search-icon></span>
+                                <input class="uk-search-input" type="search" placeholder="Busca tu hogar..." autofocus>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Search Modal -->
+        </nav>
+        <!-- End Navbar -->
+        
+        <!--- Sidebar -->
+        <div id="sidenav" uk-offcanvas="overlay: true">
+            <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+                <ul class="uk-nav uk-nav-primary uk-margin-auto-vertical">
+                    <li class="uk-active uk-text-uppercase">
+                        <a href="#"></a>Real<strong>Estate</strong>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="uk-marging-small-right" uk-icon="icon: sign-in"></span> Ingreso / Registro
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="uk-marging-small-right" uk-icon="icon: plus"></span> Añadir propiedad
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!-- End Sidebar -->
+    </header>
+
+    <main>
+        <div class="uk-section uk-padding-remove">
+            <div class="uk-cover-container">
+                <canvas height="100px" width=""></canvas>
+                <img src="./assets/img/backgound/breadcrumb.jpg" alt="" uk-cover>
+
+                <div class="uk-position-small uk-position-center-left uk-overlay">
+                    <ul class="uk-breadcrumb uk-light">
+                        <li><a href="#">Inicio</a></li>
+                        <li><span>Registro de propiedad</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="uk-section">
+            <div class="uk-container uk-container-small">
+                <h2 class="uk-heading-line uk-text-center">
+                    <span>Añadir propiedad</span>
+                </h2>
+
+                <div class="uk-margin uk-margin-auto uk-card-default uk-card-body uk-card-shadow-large">
+                    <form action="">
+                        <div uk-grid>
+                            <div class="uk-width-1-1">
+                                <h3 class="uk-heading-bullet">Generalidades</h3>
+                            </div>
+                            <div class="uk-width-1-1">
+                                <div class="uk-margin">
+                                    <div class="uk-inline uk-width-1-1">
+                                        <input type="text" class="uk-input uk-form-large" placeholder="Nombre de la propiedad">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="uk-width-2-4@m uk-width-1-2@s">
+                                <div class="uk-margin">
+                                    <div class="uk-inline uk-width-1-1">
+                                        <input type="number" class="uk-input uk-form-large" placeholder="Precio">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-2-4@m uk-width-1-2@s">
+                                <div class="uk-margin">
+                                    <div class="uk-inline uk-width-1-1">
+                                        <select class="uk-select uk-form-large">
+                                            <option selected disabled>Tipo de precio</option>
+                                            <option value="venta">Pago unico</option>
+                                            <option value="alquiler">Alquiler por mes</option>
+                                            <option value="alquiler">Alquiler por año</option>
+                                            <option value="alquiler">Alquiler por hora</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="uk-width-1-2">
+                                <div class="uk-margin">
+                                    <div class="uk-unline uk-width-1-1">
+                                        <select class="uk-select uk-form-large">
+                                            <option disabled selected>Tipo de operación</option>
+                                            <option value="">Venta</option>
+                                            <option value="">Renta</option>
+                                            <option value="">Remate</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-2">
+                                <div class="uk-margin">
+                                    <div class="uk-unline uk-width-1-1">
+                                        <select class="uk-select uk-form-large">
+                                            <option disabled selected>Tipo de propiedad</option>
+                                            <option value="">Casa</option>
+                                            <option value="">Departamento</option>
+                                            <option value="">Terreno</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="uk-width-1-1">
+                                <div class="uk-margin">
+                                    <div class="uk-unline uk-width-1-1">
+                                        <textarea name="" class="uk-form-large uk-textarea" placeholder="Descripción de la propiedad"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="uk-width-1-1">
+                                <h3 class="uk-heading-bullet">Características</h3>
+                            </div>
+                            <div class="uk-width-1-2">
+                                <div class="uk-margin">
+                                    <div class="uk-unline uk-width-1-1">
+                                        <input type="number" class="uk-form-large uk-input" placeholder="m2 de terreno">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-2">
+                                <div class="uk-margin">
+                                    <div class="uk-unline uk-width-1-1">
+                                        <input type="number" class="uk-form-large uk-input" placeholder="m2 de construcción">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="uk-width-1-2">
+                                <div class="uk-margin">
+                                    <div class="uk-unline uk-width-1-1">
+                                        <input type="number" class="uk-form-large uk-input" placeholder="Nro. de recamaras">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-2">
+                                <div class="uk-margin">
+                                    <div class="uk-unline uk-width-1-1">
+                                        <input type="number" class="uk-form-large uk-input" placeholder="Nro. de baños completos">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="uk-width-1-2">
+                                <div class="uk-margin">
+                                    <div class="uk-unline uk-width-1-1">
+                                        <input type="number" class="uk-form-large uk-input" placeholder="Nro. de medio baños">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-2">
+                                <div class="uk-margin">
+                                    <div class="uk-unline uk-width-1-1">
+                                        <input type="number" class="uk-form-large uk-input" placeholder="Nro. de estacionamientos">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="uk-width-1-1">
+                                <h3 class="uk-heading-bullet">Domicilio</h3>
+                            </div>
+                            <div class="uk-width-1-2">
+                                <div class="uk-margin">
+                                    <div class="uk-unline uk-width-1-1">
+                                        <input type="text" class="uk-form-large uk-input" placeholder="Estado">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-2">
+                                <div class="uk-margin">
+                                    <div class="uk-unline uk-width-1-1">
+                                        <input type="text" class="uk-form-large uk-input" placeholder="Ciudad">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-1">
+                                <div class="uk-margin">
+                                    <div class="uk-unline uk-width-1-1">
+                                        <input type="text" class="uk-form-large uk-input" placeholder="Calle">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-2">
+                                <div class="uk-margin">
+                                    <div class="uk-unline uk-width-1-1">
+                                        <input type="text" class="uk-form-large uk-input" placeholder="Nro. Ext.">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-2">
+                                <div class="uk-margin">
+                                    <div class="uk-unline uk-width-1-1">
+                                        <input type="text" class="uk-form-large uk-input" placeholder="Nro. Int.">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-2">
+                                <div class="uk-margin">
+                                    <div class="uk-unline uk-width-1-1">
+                                        <input type="number" class="uk-form-large uk-input" placeholder="C.P">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-2">
+                                <div class="uk-margin">
+                                    <div class="uk-unline uk-width-1-1">
+                                        <input type="text" class="uk-form-large uk-input" placeholder="Colonia">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="uk-margin">
+                            <button class="uk-button uk-button-primary uk-button-large uk-align-right">Añadir propiedad</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer" class="uk-background-muted">
+        <div class="uk-container uk-padding">
+            <div class="uk-grid uk-container uk-child-width-1-1@s uk-child-width-1-3@m">
+                <!--- Acerca de -->
+                <div>
+                    <h3 class="uk-heading-bullet">Acerca</h3>
+                    <a href="#"> REAL<strong>STATE</strong> </a>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Voluptate consequuntur dignissimos saepe dolore.</p>
+                </div>
+                <!-- Fin acerca de-->
+                <!--- Ultimas propiedades -->
+                <div>
+                    <h3 class="uk-heading-bullet">Últimas propiedades</h3>
+
+                    <!-- item propiedad -->
+                    <div class="uk-marging-small" uk-grid>
+                        <div class="uk-width-1-4">
+                            <img src="https://getuikit.com/docs/images/light.jpg">
+                        </div>
+                        <div class="uk-width-3-4">
+                            <p class="uk-margin-remove"><b>Nombre de la propiedad</b></p>
+                            <p class="uk-margin-remove">Descripción de la propiedad</p>
+                        </div>
+                    </div>
+                    <!-- item propiedad -->
+                    <div class="uk-marging-small" uk-grid>
+                        <div class="uk-width-1-4">
+                            <img src="https://getuikit.com/docs/images/light.jpg">
+                        </div>
+                        <div class="uk-width-3-4">
+                            <p class="uk-margin-remove"><b>Nombre de la propiedad</b></p>
+                            <p class="uk-margin-remove">Descripción de la propiedad</p>
+                        </div>
+                    </div>
+                    <!-- item propiedad -->
+                    <div class="uk-marging-small" uk-grid>
+                        <div class="uk-width-1-4">
+                            <img src="https://getuikit.com/docs/images/light.jpg">
+                        </div>
+                        <div class="uk-width-3-4">
+                            <p class="uk-margin-remove"><b>Nombre de la propiedad</b></p>
+                            <p class="uk-margin-remove">Descripción de la propiedad</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin ultimas propiedades -->
+                <!--- Contacto -->
+                <div>
+                    <h3 class="uk-heading-bullet">Contacto</h3>
+
+                    <address>
+                        <span>Calle Arboledas #137 A</span><br>
+                        <span>Guadalajara Jalisco, México</span><br>
+                        <span>Teléfono: +34 35458974</span><br>
+                        <span>Email: <a href="mailto:example@mail">real_estate@mail</a></span>
+                    </address>
+
+                    <div>
+                        <form action="">
+                            <input type="email" name="email" class="uk-input uk-form-width-medium">
+                            <button class="uk-button uk-button-default">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Fin contacto -->
+            </div>
+        </div>
+        <div class="uk-container uk-background-secondary uk-light uk-padding-remove uk-container-expand">
+            <div class="uk-text-center uk-padding-small">
+                Real<strong>Estate</strong> &copy; 2022 Todos los derechos reservados
+            </div>
+        </div>        
+    </footer>
+
+</body>
+</html>
